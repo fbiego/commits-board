@@ -1,7 +1,5 @@
 name: Script
-on: 
-    schedule:
-    - cron: "0 15 * * 1"
+on: push
     
 jobs:
     build:
