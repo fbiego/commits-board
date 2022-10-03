@@ -17,11 +17,9 @@ function getCountry($country)
     $dom = new DOMDocument();
     libxml_use_internal_errors(true);
     $dom->loadHTML($json);
-    $list = $dom->getElementsByTagName("tbody")
-        ->item(0);
+    $list = $dom->getElementsByTagName("tbody")->item(0);
     $data = $list->getElementsByTagName("tr");
-    $date = $dom->getElementsByTagName("code")
-        ->item(0)->nodeValue;
+    $date = $dom->getElementsByTagName("code")->item(0)->nodeValue;
     $fname = str_replace([' ', '-', ':', '+'], ['_', '', '', ''], $date);
     $array = "{" . PHP_EOL;
     $x = 1;
@@ -31,12 +29,8 @@ function getCountry($country)
         $elem = $n->getElementsByTagName("td");
         $rank = $elem->item(0)->nodeValue;
         $commits = $elem->item(2)->nodeValue;
-        $username = $n->getElementsByTagName("a")
-            ->item(0)->nodeValue;
-        $icon = $elem->item(3)
-            ->getElementsByTagName("img")
-            ->item(0)
-            ->getAttribute("data-src");
+        $username = $n->getElementsByTagName("a")->item(0)->nodeValue;
+        $icon = $elem->item(3)->getElementsByTagName("img")->item(0)->getAttribute("data-src");
         $name = $elem->item(1)->nodeValue;
         $name = str_replace($username, "", $name);
         $name = str_replace("(", "", $name);
