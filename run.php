@@ -5,7 +5,7 @@ function getCountry($country)
 {
     $cURLConnection = curl_init();
 
-    curl_setopt($cURLConnection, CURLOPT_URL, 'https://committers.top/' . $country);
+    curl_setopt($cURLConnection, CURLOPT_URL, 'https://commits.top/' . $country);
     curl_setopt($cURLConnection, CURLOPT_RETURNTRANSFER, true);
     //curl_setopt($cURLConnection, CURLOPT_HEADERFUNCTION, "getHeaders");
     curl_setopt($cURLConnection, CURLOPT_HTTPHEADER, array(
