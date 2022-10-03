@@ -12,7 +12,7 @@ jobs:
         - name: checkout repo content
           uses: actions/checkout@v2 # checkout the repository content to github runner.
         - name: PHP Runner
-          uses: franzliedke/gh-action-php@0.2.0
+          uses: franzliedke/gh-action-php@0.3.0
 
         - name: execute php script # run the run.py to get the latest data
           run: |
