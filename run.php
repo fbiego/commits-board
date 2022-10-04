@@ -14,6 +14,7 @@ function getCountry($country)
     curl_setopt($cURLConnection, CURLOPT_HEADER, false);
 
     $json = curl_exec($cURLConnection);
+    echo "data > " . $json;
 
     $dom = new DOMDocument();
     libxml_use_internal_errors(true);
