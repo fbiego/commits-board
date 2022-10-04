@@ -14,12 +14,13 @@ function getCountry($country)
     curl_setopt($cURLConnection, CURLOPT_HEADER, false);
 
     $json = curl_exec($cURLConnection);
-    echo "data > " . $json;
+    
 
     $dom = new DOMDocument();
     libxml_use_internal_errors(true);
     $dom->loadHTML($json);
     $list = $dom->getElementsByTagName("tbody")->item(0);
+    echo "data > " . $list->nodeValue;
     $data = $list->getElementsByTagName("tr");
     $date = $dom->getElementsByTagName("code")->item(0)->nodeValue;
     $fname = str_replace([' ', '-', ':', '+'], ['_', '', '', ''], $date);
