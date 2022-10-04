@@ -6,4 +6,4 @@ A Billboard for the most active users per country based on [`committers.top`](ht
 
 ## Billboard
 
-[`biego.tech/commits-board/`](http://biego.tech/commits-board/)
+[`fbiego.com/commits-board/`](https://fbiego.com/commits-board/)
