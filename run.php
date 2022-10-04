@@ -5,7 +5,7 @@ function getCountry($country)
 {
     $cURLConnection = curl_init();
 
-    curl_setopt($cURLConnection, CURLOPT_URL, 'https://commits.top/' . $country);
+    curl_setopt($cURLConnection, CURLOPT_URL, 'https://committers.top/' . $country);
     curl_setopt($cURLConnection, CURLOPT_RETURNTRANSFER, true);
     //curl_setopt($cURLConnection, CURLOPT_HEADERFUNCTION, "getHeaders");
     curl_setopt($cURLConnection, CURLOPT_HTTPHEADER, array(
@@ -20,7 +20,7 @@ function getCountry($country)
     libxml_use_internal_errors(true);
     $dom->loadHTML($json);
     $list = $dom->getElementsByTagName("tbody")->item(0);
-    echo "data > " . $list->nodeValue;
+    //echo "data > " . $list->nodeValue;
     $data = $list->getElementsByTagName("tr");
     $date = $dom->getElementsByTagName("code")->item(0)->nodeValue;
     $fname = str_replace([' ', '-', ':', '+'], ['_', '', '', ''], $date);
