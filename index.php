@@ -22,7 +22,7 @@ $countries = json_decode(file_get_contents("countries.json"), true);
         <span class="flx-bar-item">Commits Board</span>
         </div>
         
-        <ul class="flx-ul flx-hoverable flx-xxlarge">
+        <ul class="flx-ul flx-hoverable flx-xxlarge flx-center">
 <?php
 foreach ($countries as $i=>$j)
 {
