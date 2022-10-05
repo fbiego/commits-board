@@ -1,6 +1,5 @@
 name: Script
-on: 
-    push:
+on:
     schedule:
     - cron: "0 15 * * 1"
     
